@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f5ef">
+  <title>BookNest — Your next chapter starts here</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#" aria-label="BookNest home"><span class="brand-icon" aria-hidden="true">▤</span> BookNest<span class="brand-dot">.</span></a>
+    <nav aria-label="Main navigation"><a class="active" href="#books">Bookshop</a><a href="#about">About us</a></nav>
+    <button class="cart-button" id="open-cart">Bag <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> A LITTLE SHELF. A WORLD OF STORIES.</p>
+        <h1 id="hero-title">Find your next<br><em>favourite chapter.</em></h1>
+        <p class="intro">Old favourites, new adventures, and stories that stay with you. Find a book, find a little time for yourself.</p>
+        <a class="primary-button" href="#books">Explore the books <span aria-hidden="true">↗</span></a>
+        <p class="hero-note">Thoughtfully picked. Ready for your bookshelf.</p>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a small collection of books" role="img">
+        <div class="art-circle"></div>
+        <span class="art-star star-one">✳</span><span class="art-star star-two">✧</span>
+        <div class="hero-book back-book"><span>THE JOY<br>OF READING</span><small>ONE PAGE AT A TIME</small></div>
+        <div class="hero-book front-book"><small>MAKE ROOM FOR</small><span>A good<br>story.</span><div class="book-flower">✳</div><small>THE BOOKNEST COLLECTION</small></div>
+        <div class="floating-note">There’s a book<br>for every mood. <span>♡</span></div>
+      </div>
+    </section>
+
+    <section class="catalog" id="books" aria-labelledby="catalog-title">
+      <div class="section-top"><div><p class="eyebrow">THE BOOKSHELF</p><h2 id="catalog-title">Good reads, great company.</h2></div><p class="collection-note">A small collection. Endless possibilities.</p></div>
+      <div class="toolbar">
+        <div class="filters" aria-label="Filter books by category"><button class="filter active" data-category="All" aria-pressed="true">All books</button><button class="filter" data-category="Fiction" aria-pressed="false">Fiction</button><button class="filter" data-category="Poetry" aria-pressed="false">Poetry</button><button class="filter" data-category="Self-growth" aria-pressed="false">Self-growth</button></div>
+        <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search title or author…" aria-label="Search books by title or author"></label>
+      </div>
+      <p class="results" id="results" role="status"></p>
+      <div class="book-grid" id="book-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>No books found. Try another title, author, or category.</p>
+    </section>
+
+    <section class="about" id="about"><span class="about-symbol" aria-hidden="true">✳</span><div><p class="eyebrow">A NOTE FROM BOOKNEST</p><h2>A book is a lovely place to begin.</h2><p>We’re a small online bookshop with a simple idea: make finding your next read a little easier. Browse our shelf and build a bag of stories you’ll love.</p></div><a href="#books">Find your next read <span aria-hidden="true">↗</span></a></section>
+  </main>
+
+  <footer><a class="brand" href="#">BookNest<span class="brand-dot">.</span></a><p>Made for readers, one page at a time.</p><small>Student assignment · Demo bookstore</small></footer>
+  <div class="toast" id="toast" role="status"></div>
+
+  <dialog id="cart-dialog" aria-labelledby="cart-title">
+    <div class="dialog-header"><div><p class="eyebrow">YOUR NEXT READS</p><h2 id="cart-title">Your book bag</h2></div><button class="close-button" id="close-cart" aria-label="Close book bag">×</button></div>
+    <div id="cart-items"></div>
+    <div class="cart-summary"><div><span>Total</span><strong id="cart-total">৳0</strong></div><p>Assignment demo — no payment or delivery is processed.</p><button class="primary-button" id="checkout">Place demo order <span aria-hidden="true">↗</span></button></div>
+  </dialog>
+</body>
+</html>
