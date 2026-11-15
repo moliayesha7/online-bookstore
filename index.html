@@ -9,13 +9,15 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="header">
+  <!-- Assignment validation error 1: href is not allowed on header. Remove href to fix. -->
+  <header class="header" href="#books">
     <a class="brand" href="#" aria-label="BookNest home"><span class="brand-icon" aria-hidden="true">▤</span> BookNest<span class="brand-dot">.</span></a>
     <nav aria-label="Main navigation"><a class="active" href="#books">Bookshop</a><a href="#about">About us</a></nav>
     <button class="cart-button" id="open-cart">Bag <span id="cart-count">0</span></button>
   </header>
 
-  <main>
+  <!-- Assignment validation error 2: action is not allowed on main. Remove action to fix. -->
+  <main action="#books">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span></span> A LITTLE SHELF. A WORLD OF STORIES.</p>
@@ -36,7 +38,7 @@
     <section class="catalog" id="books" aria-labelledby="catalog-title">
       <div class="section-top"><div><p class="eyebrow">THE BOOKSHELF</p><h2 id="catalog-title">Good reads, great company.</h2></div><p class="collection-note">A small collection. Endless possibilities.</p></div>
       <div class="toolbar">
-        <div class="filters" aria-label="Filter books by category"><button class="filter active" data-category="All" aria-pressed="true">All books</button><button class="filter" data-category="Fiction" aria-pressed="false">Fiction</button><button class="filter" data-category="Poetry" aria-pressed="false">Poetry</button><button class="filter" data-category="Self-growth" aria-pressed="false">Self-growth</button></div>
+        <div class="filters" role="group" aria-label="Filter books by category"><button class="filter active" data-category="All" aria-pressed="true">All books</button><button class="filter" data-category="Fiction" aria-pressed="false">Fiction</button><button class="filter" data-category="Poetry" aria-pressed="false">Poetry</button><button class="filter" data-category="Self-growth" aria-pressed="false">Self-growth</button></div>
         <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search title or author…" aria-label="Search books by title or author"></label>
       </div>
       <p class="results" id="results" role="status"></p>
@@ -47,7 +49,8 @@
     <section class="about" id="about"><span class="about-symbol" aria-hidden="true">✳</span><div><p class="eyebrow">A NOTE FROM BOOKNEST</p><h2>A book is a lovely place to begin.</h2><p>We’re a small online bookshop with a simple idea: make finding your next read a little easier. Browse our shelf and build a bag of stories you’ll love.</p></div><a href="#books">Find your next read <span aria-hidden="true">↗</span></a></section>
   </main>
 
-  <footer><a class="brand" href="#">BookNest<span class="brand-dot">.</span></a><p>Made for readers, one page at a time.</p><small>Student assignment · Demo bookstore</small></footer>
+  <!-- Assignment validation error 3: type is not allowed on footer. Remove type to fix. -->
+  <footer type="text"><a class="brand" href="#">BookNest<span class="brand-dot">.</span></a><p>Made for readers, one page at a time.</p><small>Student assignment · Demo bookstore</small></footer>
   <div class="toast" id="toast" role="status"></div>
 
   <dialog id="cart-dialog" aria-labelledby="cart-title">

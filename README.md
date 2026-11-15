@@ -8,6 +8,10 @@ Open `index.html` in a modern browser (Chrome, Edge, or Firefox). Keep `index.ht
 
 ## Features
 
+### Intentional HTML validation errors
+
+For the assignment, `index.html` includes three intentional errors: `href` on `header`, `action` on `main`, and `type` on `footer`. These attributes are not allowed on those elements. Comments next to each element explain the fix. Upload `index.html` to https://validator.w3.org/nu/ to inspect the checker results. Remove these three attributes when a valid HTML document is needed.
+
 - Six sample books with authors and illustrative prices in Bangladeshi taka.
 - Search by title or author, combined with category filters.
 - Add books to a cart, change quantities, remove books, and see the total.
